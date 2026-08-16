@@ -16,19 +16,17 @@ Built entirely with Python's standard library, the tool requires no external dep
 
 Since the script uses only native Python libraries, setup is incredibly simple. Just clone the repository and run it.
 
-```bash
-git clone [https://github.com/Datguywes91/file-integrity-monitor.git](https://github.com/YOUR-USERNAME/file-integrity-monitor.git)
-cd file-integrity-monitor
+git clone [https://github.com/Datguywes91/HashWarden.git](https://github.com/Datguywes91/HashWarden.git)
+cd HashWarden
 
-Usage Guide
+## Usage Guide
 
 The tool operates in two primary modes: update (to create the baseline) and check (to verify against it).
-1. Establish the Baseline
 
-Before you can monitor files, you need to calculate their known-good hashes. Point the script at your target directory using --mode update.
+1. Establish the Baseline Before you can monitor files, you need to calculate their known-good hashes. Point the script at your target directory using --mode update.
 Bash
 
-python integrity_checker.py /path/to/target/directory --mode update
+python HashWarden.py /path/to/target/directory --mode update
 
 This creates a baseline.json file in your current working directory containing the file paths and their SHA-256 hashes.
 2. Run an Integrity Check (One-off)
@@ -36,7 +34,7 @@ This creates a baseline.json file in your current working directory containing t
 To verify your files haven't been tampered with, run the script in check mode.
 Bash
 
-python integrity_checker.py /path/to/target/directory --mode check
+python HashWarden.py /path/to/target/directory --mode check
 
 3. Continuous Monitoring
 
@@ -44,7 +42,7 @@ To leave the script running as an active monitor, add the --interval flag follow
 Bash
 
 # Checks the directory every 5 minutes (300 seconds)
-python integrity_checker.py /path/to/target/directory --mode check --interval 300
+python HashWarden.py /path/to/target/directory --mode check --interval 300
 
 Example Output
 
