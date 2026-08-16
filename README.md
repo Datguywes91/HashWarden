@@ -29,6 +29,7 @@ Bash
 python HashWarden.py /path/to/target/directory --mode update
 
 This creates a baseline.json file in your current working directory containing the file paths and their SHA-256 hashes.
+
 2. Run an Integrity Check (One-off)
 
 To verify your files haven't been tampered with, run the script in check mode.
