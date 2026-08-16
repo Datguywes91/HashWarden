@@ -44,10 +44,7 @@ Bash
 # Checks the directory every 5 minutes (300 seconds)
 python HashWarden.py /path/to/target/directory --mode check --interval 300
 
-Example Output
-
-When a modification is detected, the script outputs a clear, timestamped alert to the console:
-Plaintext
+## Example Output
 
 [2026-08-16 14:30:00] [!] ALERT: Modifications detected!
   New files:
@@ -57,3 +54,5 @@ Plaintext
   Deleted files:
     - /target/directory/old_logs.txt
 --------------------------------------------------
+
+
